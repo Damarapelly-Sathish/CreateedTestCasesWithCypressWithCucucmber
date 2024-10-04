@@ -4,7 +4,7 @@ Feature: Open Google
 
         Given the user opens the google homepage
 
-        When the user navigates to the images button
+        When the user enter "19311a12c6@sreenidhi.edu.in" and "S@t26-26"
 
         Then the user click on search bar
 
