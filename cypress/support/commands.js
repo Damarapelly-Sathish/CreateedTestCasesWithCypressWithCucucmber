@@ -43,3 +43,12 @@ Cypress.Commands.add('mouseHover', (locator) => {
     }
 })
 
+Cypress.Commands.add('searchElement', (locator, element) => {
+    if (locator.includes("//")) {
+        cy.xpath(locator).scrollIntoView().should('exist').type(element).type('{enter}')
+    }
+    else {
+        cy.get(locator).scrollIntoView().should('exist').type(element).type('{enter}')
+    }
+})
+

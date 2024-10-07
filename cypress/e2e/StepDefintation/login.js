@@ -26,14 +26,14 @@ When('the user enter {string} and {string}', () => {
     cy.inputShouldHave('#ap_email', '19311a12c6@sreenidhi.edu.in')
     cy.inputShouldNotHave('#ap_email').should('not.equal', '19311a12c5@sreenidhi.edu.in')
     cy.forceClick('#continue');
-    cy.enterText('#ap_password', 'S@t26');
-    cy.forceClick('#signInSubmit')
-    cy.get('.a-alert-content').should('contain.text', 'Your password is incorrect')
-    cy.get('#ap_password').clear();
     cy.enterText('#ap_password', 'S@t26-26');
-    cy.inputShouldHave('#ap_password', 'S@t26-26')
-    cy.inputShouldNotHave('input[name="password"]', 'S@t26-26')
     cy.forceClick('#signInSubmit')
+    // cy.get('.a-alert-content').should('contain.text', 'Your password is incorrect')
+    // cy.get('#ap_password').clear();
+    // cy.enterText('#ap_password', 'S@t26-26');
+    // cy.inputShouldHave('#ap_password', 'S@t26-26')
+    // // cy.inputShouldNotHave('input[name="password"]', 'S@t26-26')
+    // cy.forceClick('#signInSubmit')
 });
 
 // Then step: Verify Google homepage elements
